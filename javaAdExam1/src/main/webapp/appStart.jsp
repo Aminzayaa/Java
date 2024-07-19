@@ -1,18 +1,9 @@
-<%@ page import="app.GameApp"%>  //GameApp.java импортлож оруулсан
+<%@ page import="app.GameApp"%> 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <%
-    request.setCharacterEncoding("UTF-8");
-
-    String name = request.getParameter("name"); // утгыг авч хувьсагчид оноодог
-    String result = "Not executed"; // ямар ч үйлдэл хийгээгүй болон амжилтгүй үед гарна
-
-    if (name != null && !name.isEmpty()) { // нөхцлийг шалгаж бна
-        GameApp gameApp = new GameApp(); // GameApp Object үүсгэж бна
-        gameApp.setItem("something"); 
-        result = gameApp.start(name);
-    }
+String result = (String) request.getAttribute("result");
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,11 +28,13 @@ body {
 
 <h2>Тоглоомын программын гүйцэтгэлийн хуудас</h2>
 <div class="result">
-    <h3>Хэрэглээний гүйцэтгэлийн хуудас</h3>
+    <c:if test="${not empty result}">
+        <h3> テスト <h3>
+    </c:if>
     <p><%= result %></p>
 </div>
 
-<form action="appStart.jsp" method="post">
+<form action="StartAppServlet" method="post">
     <label>Username:</label>
     <input type="text" name="name">
     <br>
