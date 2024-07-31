@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/dao/UserDaoTest.java=UTF-8
+encoding//src/entity/UserTest.java=UTF-8
+encoding//src/test/DeleteTest.java=UTF-8
+encoding//src/test/FindAllTest.java=UTF-8
+encoding//src/test/FindByIdTest.java=UTF-8
+encoding//src/test/InsertTest.java=UTF-8
+encoding//src/test/UpdateTest.java=UTF-8
+encoding//src/util/DbUtil.java=UTF-8
+encoding//src/util/Utility.java=UTF-8
+encoding/<project>=windows-1252
