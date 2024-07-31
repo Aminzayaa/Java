@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>variable_1</title>
+</head>
+<body>
+	<table border="">
+		<tr>
+			<td>Japanese language</td>
+			<td>Math</td>
+			<td>English</td>
+			<td>total</td>
+			<td>average</td>
+		</tr>
+
+		<tr>
+			<td>70</td>
+			<td>80</td>
+			<td>90</td>
+			<td id="sum"></td>
+			<td id="ave"></td>
+		</tr>
+	</table>
+	<script>
+		let sum = 70 + 80 + 90;
+		let ave = sum / 3;
+		document.getElementById('sum').innerHTML = sum;
+		document.getElementById('ave').innerHTML = ave;
+	</script>
+</body>
+</html>

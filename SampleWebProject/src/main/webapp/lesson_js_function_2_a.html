@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/function_2.js"></script>
+<title>function_2_a</title>
+</head>
+<body>
+	<span>Amount including tax:</span>
+	<span id="price">xx</span>
+	<script>
+		// Assign the amount including tax to the content of the element with id "price"
+		let price = getInTaxPrice(1000);
+		document.getElementById('price').innerHTML = price;
+	</script>
+</body>
+</html>

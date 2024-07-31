@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function_1</title>
+</head>
+<body>
+	<span>Amount including tax1:</span>
+	<span id="price1">xx</span>
+	<br>
+	<span>Amount including tax 2:</span>
+	<span id="price2">xx</span>
+	<script>
+		// Function that returns amount including consumption tax
+		let getInTaxPrice = function(price) {
+			price = price * 1.1;
+			return price;
+		};
+
+		// Assign the amount including tax to the content of the element with id "price1"
+		let price1 = getInTaxPrice(1000);
+		document.getElementById('price1').innerHTML = price1;
+		// Assign the amount including tax to the content of the element with id "price2"
+		let price2 = getInTaxPrice(2000);
+		document.getElementById('price2').innerHTML = price2;
+	</script>
+</body>
+</html>

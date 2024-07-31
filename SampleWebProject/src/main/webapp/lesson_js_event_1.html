@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event driven_1</title>
+<style>
+div {
+	margin: 20px 0px;
+}
+</style>
+</head>
+<body>
+	<p>Calculates the square of the entered number</p>
+
+
+	<div>
+		<label for="num">numerical value</label> 
+		<input type="number" id="num" value="0">
+	</div>
+	<div>
+		<button id="culc-btn">calculation</button>
+	</div>
+	<div>
+		<span>Calculation result : </span><span id="ret"></span>
+	</div>
+	<script>
+		// Define click event for element with id "culc-btn"
+		let culcBtn = document.getElementById('culc-btn');
+	
+		culcBtn.addEventListener('click', function() {
+			// Get the input value of the element with id "num"
+			let numStr = document.getElementById('num').value;
+			// Convert input value (string) to numeric value
+			let num = Number.parseInt(numStr);
+			// Find the square of the number
+			let ret = num * num;
+			// Assign the calculation result to the content of the element with id "ret"
+			document.getElementById('ret').innerHTML = ret;
+		});
+	</script>
+</body>
+</html>
